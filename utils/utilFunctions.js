@@ -5,11 +5,13 @@ const { Parser } = require('json2csv');
 const json2csvParser = new Parser({ delimiter: ';', header: false });
 
 const getsCSVData = (filepath) => {
-    return csv({
-        delimiter: [";"]
-    })
-        .fromFile(filepath)
+  return csv({
+    delimiter: [";"],
+  }).fromFile(filepath);
 }
+
+
+
 
 
 const addDataToCsv = (obj, path) => {
