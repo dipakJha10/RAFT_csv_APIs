@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "c1a41062-442b-49b6-bc94-b5fdf9ca9e73",
+		"name": "Raft CSV APIS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Books by ISBN No",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/books?isbn=5554-5545-4518",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"books"
+					],
+					"query": [
+						{
+							"key": "isbn",
+							"value": "5554-5545-4518"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get MagaZines by ISBN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/magazines?isbn=5454-5587-3210",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"magazines"
+					],
+					"query": [
+						{
+							"key": "isbn",
+							"value": "5454-5587-3210"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET API Magazines",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/magazines",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"magazines"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get API Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get API authors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Magazines by authors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/magazines?authors=null-walter@echocat.org",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"magazines"
+					],
+					"query": [
+						{
+							"key": "authors",
+							"value": "null-walter@echocat.org"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Books by authors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/books?authors=null-walter@echocat.org",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"books"
+					],
+					"query": [
+						{
+							"key": "authors",
+							"value": "null-walter@echocat.org"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sorted magazines and books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/booksMagazines",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"booksMagazines"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adding books to csv file",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"isbn\": \"abc\",\r\n            \"authors\": \"walter123@echocat.org\",\r\n            \"description\": \"Aller ebenfalls sehr übersichtlich aufgelistet sind. Außerdem gibt Schuhbeck prägnante Empfehlungen zu Zutaten und Zubereitung.\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adding magazines to csv files",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"title\": \"qwewrrq\",\r\n            \"isbn\": \"5454-5587-321045\",\r\n            \"authors\": \"dull-walter@echocat.org\",\r\n            \"publishedAt\": \"21.05.2011\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/magazines",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"magazines"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "export magazines and books csv",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/download?file=books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"download"
+					],
+					"query": [
+						{
+							"key": "file",
+							"value": "books"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
