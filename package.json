@@ -4,7 +4,9 @@
   "description": "CSV Reader",
   "main": "app.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node app.js"
+    
   },
   "author": "Deepak Jha",
   "license": "ISC",
